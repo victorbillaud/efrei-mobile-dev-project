@@ -2,32 +2,34 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var scheduleViewModel = ScheduleViewModel()
+    @StateObject private var speakerViewModel = SpeakerViewModel()
     @State private var isTrue = true
 
     var body: some View {
         let _ = print("Update ContentView")
         NavigationView {
             List(scheduleViewModel.schedules) { schedule in
-                VStack(alignment: .leading) {
-                    Text(schedule.activity)
-                        .font(.headline)
-                    Text("Type: \(schedule.type.rawValue)")
-                        .font(.subheadline)
-                    Text("Location: \(schedule.location)")
-                        .font(.subheadline)
-                    Text("Start: \(formattedDate(schedule.start))")
-                        .font(.subheadline)
-                    Text("End: \(formattedDate(schedule.end))")
-                        .font(.subheadline)
+                NavigationLink(destination: EventDetailView(schedule: schedule, speakerDict: speakerViewModel.speakersLib)) {
+                    VStack(alignment: .leading) {
+                        Text(schedule.activity)
+                            .font(.headline)
+                        Text("Type: \(schedule.type.rawValue)")
+                            .font(.subheadline)
+                        Text("Location: \(schedule.location)")
+                            .font(.subheadline)
+                        Text("Start: \(formattedDate(schedule.start))")
+                            .font(.subheadline)
+                        Text("End: \(formattedDate(schedule.end))")
+                            .font(.subheadline)
+                    }
                 }
             }
             .navigationBarTitle("Schedule")
         }
         .onAppear {
             scheduleViewModel.fetchScheduleList()
+            speakerViewModel.fetchSpeakerLibrary()
         }
-        
-        
     }
 
     private func formattedDate(_ date: Date) -> String {

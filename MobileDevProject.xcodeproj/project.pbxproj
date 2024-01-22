@@ -16,6 +16,8 @@
 		0710EAFB2B5EA2C7004B5347 /* MobileDevProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EAFA2B5EA2C7004B5347 /* MobileDevProjectUITestsLaunchTests.swift */; };
 		0710EB082B5EA72C004B5347 /* AirTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB072B5EA72C004B5347 /* AirTableService.swift */; };
 		0710EB0A2B5EAA4F004B5347 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB092B5EAA4F004B5347 /* ScheduleViewModel.swift */; };
+		0710EB0C2B5EB323004B5347 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB0B2B5EB323004B5347 /* EventDetailView.swift */; };
+		A15A866A2B5EDEFB00B2E6F4 /* SpeakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A86692B5EDEFB00B2E6F4 /* SpeakerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		0710EAFA2B5EA2C7004B5347 /* MobileDevProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDevProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0710EB072B5EA72C004B5347 /* AirTableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AirTableService.swift; path = Service/AirTableService.swift; sourceTree = "<group>"; };
 		0710EB092B5EAA4F004B5347 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		0710EB0B2B5EB323004B5347 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		A15A86692B5EDEFB00B2E6F4 /* SpeakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				0710EAE32B5EA2C7004B5347 /* Preview Content */,
 				0710EB072B5EA72C004B5347 /* AirTableService.swift */,
 				0710EB092B5EAA4F004B5347 /* ScheduleViewModel.swift */,
+				0710EB0B2B5EB323004B5347 /* EventDetailView.swift */,
+				A15A86692B5EDEFB00B2E6F4 /* SpeakerViewModel.swift */,
 			);
 			path = MobileDevProject;
 			sourceTree = "<group>";
@@ -264,8 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0710EAE02B5EA2C6004B5347 /* ContentView.swift in Sources */,
+				0710EB0C2B5EB323004B5347 /* EventDetailView.swift in Sources */,
 				0710EB082B5EA72C004B5347 /* AirTableService.swift in Sources */,
 				0710EADE2B5EA2C6004B5347 /* MobileDevProjectApp.swift in Sources */,
+				A15A866A2B5EDEFB00B2E6F4 /* SpeakerViewModel.swift in Sources */,
 				0710EB0A2B5EAA4F004B5347 /* ScheduleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
