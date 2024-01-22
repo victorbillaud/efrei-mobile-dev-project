@@ -15,8 +15,8 @@ class ScheduleViewModel: ObservableObject {
     func fetchScheduleList() {
         requestFactory.getScheduleList { schedules in
             DispatchQueue.main.async {
-                if let firstSchedule = schedules?.first {
-                    self.schedules.append(firstSchedule)
+                if let schedules = schedules {
+                    self.schedules.append(contentsOf: schedules)
                 }
             }
         }

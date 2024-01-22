@@ -34,7 +34,7 @@ struct Schedule: Identifiable, Decodable {
     var start: Date
     var end: Date
     var location: String
-    var speakers: [String] // Assuming speakerID is a String, you might need to replace it with the actual type
+    var speakers: [String]?
     var notes: String?
 
     enum EventType: String, Decodable {
@@ -62,7 +62,7 @@ struct Schedule: Identifiable, Decodable {
         activity = try container.decode(String.self, forKey: .activity)
         type = try container.decode(EventType.self, forKey: .type)
         location = try container.decode(String.self, forKey: .location)
-        speakers = try container.decode([String].self, forKey: .speakers)
+        speakers = try container.decodeIfPresent([String].self, forKey: .speakers)
         notes = try container.decodeIfPresent(String.self, forKey: .notes)
 
         // Use a custom date formatter for the "Start" and "End" keys
@@ -73,7 +73,7 @@ struct Schedule: Identifiable, Decodable {
     }
 }
 
-let url_string = "https://api.airtable.com/v0/apps3Rtl22fQOI9Ph/%F0%9F%93%86%20Schedule?maxRecords=3&view=Full%20schedule"
+let url_string = "https://api.airtable.com/v0/apps3Rtl22fQOI9Ph/%F0%9F%93%86%20Schedule?view=Full%20schedule"
 let token = "patikQ2NLt8ZuefWF.bab4360644fa68db943fec3ff9db7a0bb990674f092136422b3a0be9212e229d"
 
 protocol RequestFactoryProtocol {
@@ -101,7 +101,7 @@ class RequestFactory: RequestFactoryProtocol{
                 return
             }
 
-            // Print the received JSON string for debugging
+
             if let jsonString = String(data: data, encoding: .utf8) {
                 print("Received JSON: \(jsonString)")
             }
