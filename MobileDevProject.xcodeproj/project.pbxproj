@@ -14,6 +14,8 @@
 		0710EAEF2B5EA2C7004B5347 /* MobileDevProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EAEE2B5EA2C7004B5347 /* MobileDevProjectTests.swift */; };
 		0710EAF92B5EA2C7004B5347 /* MobileDevProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EAF82B5EA2C7004B5347 /* MobileDevProjectUITests.swift */; };
 		0710EAFB2B5EA2C7004B5347 /* MobileDevProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EAFA2B5EA2C7004B5347 /* MobileDevProjectUITestsLaunchTests.swift */; };
+		0710EB082B5EA72C004B5347 /* AirTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB072B5EA72C004B5347 /* AirTableService.swift */; };
+		0710EB0A2B5EAA4F004B5347 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB092B5EAA4F004B5347 /* ScheduleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		0710EAF42B5EA2C7004B5347 /* MobileDevProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDevProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0710EAF82B5EA2C7004B5347 /* MobileDevProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDevProjectUITests.swift; sourceTree = "<group>"; };
 		0710EAFA2B5EA2C7004B5347 /* MobileDevProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDevProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0710EB072B5EA72C004B5347 /* AirTableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AirTableService.swift; path = Service/AirTableService.swift; sourceTree = "<group>"; };
+		0710EB092B5EAA4F004B5347 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				0710EADF2B5EA2C6004B5347 /* ContentView.swift */,
 				0710EAE12B5EA2C7004B5347 /* Assets.xcassets */,
 				0710EAE32B5EA2C7004B5347 /* Preview Content */,
+				0710EB072B5EA72C004B5347 /* AirTableService.swift */,
+				0710EB092B5EAA4F004B5347 /* ScheduleViewModel.swift */,
 			);
 			path = MobileDevProject;
 			sourceTree = "<group>";
@@ -258,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0710EAE02B5EA2C6004B5347 /* ContentView.swift in Sources */,
+				0710EB082B5EA72C004B5347 /* AirTableService.swift in Sources */,
 				0710EADE2B5EA2C6004B5347 /* MobileDevProjectApp.swift in Sources */,
+				0710EB0A2B5EAA4F004B5347 /* ScheduleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
