@@ -37,7 +37,8 @@ struct Schedule: Identifiable, Decodable {
     var speakers: [String]?
     var notes: String?
 
-    enum EventType: String, Decodable {
+    enum EventType: String, Decodable, CaseIterable {
+        case all = "All"
         case meal = "Meal"
         case networking = "Networking"
         case keynote = "Keynote"
