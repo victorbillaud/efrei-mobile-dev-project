@@ -4,6 +4,7 @@ class FilteringService {
     static func filterSchedules(_ schedules: [Schedule], by filter: Filter) -> [Schedule] {
         let schedulesFilteredByDay = filterByDay(schedules, day: filter.eventDay)
         let schedulesFilteredByType = filterByType(schedulesFilteredByDay, type: filter.eventType)
+        
         return schedulesFilteredByType
     }
     

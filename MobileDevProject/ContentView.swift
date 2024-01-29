@@ -29,23 +29,29 @@ struct ContentView: View {
         let _ = print("Update ContentView")
         NavigationView {
             VStack {
-                List(filteredSchedules) { schedule in
-                    NavigationLink(destination: EventDetailView(schedule: schedule, speakerDict: speakerViewModel.speakersLib)) {
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text(schedule.activity)
-                                    .font(.headline)
-                                Spacer()
-                                BadgeType(eventType: schedule.type)
-                            }
-                            Text("Location: \(schedule.location)")
-                                .font(.subheadline)
-                            Text(formattedDate(schedule.start))
-                                .font(.subheadline)
-                            Text("from \(formattedHour(schedule.start)) to \(formattedHour(schedule.end))")
-                                .font(.subheadline)
-                        }
-                    }
+                List{
+                    ForEach(groupedSchedules.keys.sorted(), id: \.self) { day in
+                                        Section(header: Text(day)) {
+                                            ForEach(groupedSchedules[day] ?? []) { schedule in
+                                                NavigationLink(destination: EventDetailView(schedule: schedule, speakerDict: speakerViewModel.speakersLib)) {
+                                                    VStack(alignment: .leading) {
+                                                        HStack {
+                                                            Text(schedule.activity)
+                                                                .font(.headline)
+                                                            Spacer()
+                                                            BadgeType(eventType: schedule.type)
+                                                        }
+                                                        Text("Location: \(schedule.location)")
+                                                            .font(.subheadline)
+                                                        Text(formattedDate(schedule.start))
+                                                            .font(.subheadline)
+                                                        Text("from \(formattedHour(schedule.start)) to \(formattedHour(schedule.end))")
+                                                            .font(.subheadline)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                 }
                 .sheet(isPresented: $isFilterSheetPresented) {
                     FilterSheetView(filterModel: $filterModel, isSheetPresented: $isFilterSheetPresented)
@@ -71,13 +77,20 @@ struct ContentView: View {
         .background(Color.white)
     }
     
+    var groupedSchedules: [String: [Schedule]] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        return Dictionary(grouping: filteredSchedules) { formattedDate($0.start) }
+    }
+    
     var filteredSchedules: [Schedule] {
         return FilteringService.filterSchedules(scheduleViewModel.schedules, by: filterModel.selectedFilter)
     }
     
     private func formattedDate(_ date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM d, yyyy HH:mm"
+        formatter.dateFormat = "MMM d, yyyy"
         return formatter.string(from: date)
     }
 }
