@@ -32,5 +32,26 @@ final class MobileDevProjectTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+            
+    func testFetchScheduleList() throws {
+        let expectation = XCTestExpectation(description: "Wait for schedules to be fetched")
+        
+        let expectedActivity = "Welcome breakfast"
+        
+        let requestFactory: RequestFactoryProtocol = RequestFactory()
+        
+        requestFactory.getScheduleList { schedules in
+            if let firstActivity = schedules?.first?.activity {
+                print(firstActivity)
+                XCTAssertTrue(firstActivity == expectedActivity, "Schedules list should contain the expected activity")
+            } else {
+                XCTFail("Failed to fetch schedules")
+            }
+            
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 5.0)
+    }
 
 }
