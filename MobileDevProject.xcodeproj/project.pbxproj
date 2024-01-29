@@ -20,6 +20,7 @@
 		0710EB0E2B5EC401004B5347 /* BadgeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB0D2B5EC401004B5347 /* BadgeType.swift */; };
 		0710EB112B5ECA43004B5347 /* FilteringService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB102B5ECA43004B5347 /* FilteringService.swift */; };
 		0710EB152B5ECC7B004B5347 /* FilterSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB142B5ECC7B004B5347 /* FilterSheetView.swift */; };
+		A1AF86462B67DBB300FFB7E5 /* SpeakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AF86452B67DBB300FFB7E5 /* SpeakerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		0710EB0D2B5EC401004B5347 /* BadgeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeType.swift; sourceTree = "<group>"; };
 		0710EB102B5ECA43004B5347 /* FilteringService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringService.swift; sourceTree = "<group>"; };
 		0710EB142B5ECC7B004B5347 /* FilterSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSheetView.swift; sourceTree = "<group>"; };
+		A1AF86452B67DBB300FFB7E5 /* SpeakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				0710EB092B5EAA4F004B5347 /* ScheduleViewModel.swift */,
 				0710EB0B2B5EB323004B5347 /* EventDetailView.swift */,
 				0710EB0D2B5EC401004B5347 /* BadgeType.swift */,
+				A1AF86452B67DBB300FFB7E5 /* SpeakerViewModel.swift */,
 				0710EB142B5ECC7B004B5347 /* FilterSheetView.swift */,
 			);
 			path = MobileDevProject;
@@ -287,10 +290,10 @@
 				0710EB0C2B5EB323004B5347 /* EventDetailView.swift in Sources */,
 				0710EB152B5ECC7B004B5347 /* FilterSheetView.swift in Sources */,
 				0710EB082B5EA72C004B5347 /* AirTableService.swift in Sources */,
+				A1AF86462B67DBB300FFB7E5 /* SpeakerViewModel.swift in Sources */,
 				0710EB0E2B5EC401004B5347 /* BadgeType.swift in Sources */,
 				0710EB112B5ECA43004B5347 /* FilteringService.swift in Sources */,
 				0710EADE2B5EA2C6004B5347 /* MobileDevProjectApp.swift in Sources */,
-				A15A866A2B5EDEFB00B2E6F4 /* SpeakerViewModel.swift in Sources */,
 				0710EB0A2B5EAA4F004B5347 /* ScheduleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

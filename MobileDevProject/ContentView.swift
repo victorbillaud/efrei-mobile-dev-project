@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var scheduleViewModel = ScheduleViewModel()
+    @StateObject private var speakerViewModel = SpeakerViewModel()
     @State private var selectedFilter: Filter = .all
     @State private var isFilterSheetPresented = false
     @State private var filterModel = FilterModel()
@@ -17,7 +18,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 List(filteredSchedules) { schedule in
-                    NavigationLink(destination: EventDetailView(schedule: schedule)) {
+                    NavigationLink(destination: EventDetailView(schedule: schedule, speakerDict: speakerViewModel.speakersLib)) {
                         VStack(alignment: .leading) {
                             HStack {
                                 Text(schedule.activity)
