@@ -12,11 +12,15 @@ struct SpeakerInfo: Decodable{
     let company: String
     let name: String
     let role: String
+    let email: String
+    let phone: String
     
     private enum CodingKeys: String, CodingKey {
         case company = "Company"
         case name = "Name"
         case role = "Role"
+        case email = "Email"
+        case phone = "Phone"
     }
 }
 

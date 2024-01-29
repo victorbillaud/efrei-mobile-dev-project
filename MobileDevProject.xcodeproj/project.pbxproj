@@ -20,6 +20,7 @@
 		0710EB0E2B5EC401004B5347 /* BadgeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB0D2B5EC401004B5347 /* BadgeType.swift */; };
 		0710EB112B5ECA43004B5347 /* FilteringService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB102B5ECA43004B5347 /* FilteringService.swift */; };
 		0710EB152B5ECC7B004B5347 /* FilterSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710EB142B5ECC7B004B5347 /* FilterSheetView.swift */; };
+		077B655E2B67E1F700E8BE6B /* SpeakerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077B655D2B67E1F700E8BE6B /* SpeakerCard.swift */; };
 		A1AF86462B67DBB300FFB7E5 /* SpeakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AF86452B67DBB300FFB7E5 /* SpeakerViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		0710EB0D2B5EC401004B5347 /* BadgeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeType.swift; sourceTree = "<group>"; };
 		0710EB102B5ECA43004B5347 /* FilteringService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringService.swift; sourceTree = "<group>"; };
 		0710EB142B5ECC7B004B5347 /* FilterSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSheetView.swift; sourceTree = "<group>"; };
+		077B655D2B67E1F700E8BE6B /* SpeakerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerCard.swift; sourceTree = "<group>"; };
 		A1AF86452B67DBB300FFB7E5 /* SpeakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				0710EAE12B5EA2C7004B5347 /* Assets.xcassets */,
 				0710EAE32B5EA2C7004B5347 /* Preview Content */,
 				0710EB092B5EAA4F004B5347 /* ScheduleViewModel.swift */,
+				077B655D2B67E1F700E8BE6B /* SpeakerCard.swift */,
 				0710EB0B2B5EB323004B5347 /* EventDetailView.swift */,
 				0710EB0D2B5EC401004B5347 /* BadgeType.swift */,
 				A1AF86452B67DBB300FFB7E5 /* SpeakerViewModel.swift */,
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0710EAE02B5EA2C6004B5347 /* ContentView.swift in Sources */,
+				077B655E2B67E1F700E8BE6B /* SpeakerCard.swift in Sources */,
 				0710EB0C2B5EB323004B5347 /* EventDetailView.swift in Sources */,
 				0710EB152B5ECC7B004B5347 /* FilterSheetView.swift in Sources */,
 				0710EB082B5EA72C004B5347 /* AirTableService.swift in Sources */,

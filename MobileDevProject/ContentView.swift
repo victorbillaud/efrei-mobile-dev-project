@@ -1,5 +1,17 @@
 import SwiftUI
 
+private func formattedDate(_ date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "MMM d, yyyy"
+    return formatter.string(from: date)
+}
+
+private func formattedHour(_ date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "h:mm a"
+    return formatter.string(from: date)
+}
+
 struct ContentView: View {
     @StateObject private var scheduleViewModel = ScheduleViewModel()
     @StateObject private var speakerViewModel = SpeakerViewModel()
@@ -28,9 +40,9 @@ struct ContentView: View {
                             }
                             Text("Location: \(schedule.location)")
                                 .font(.subheadline)
-                            Text("Start: \(formattedDate(schedule.start))")
+                            Text(formattedDate(schedule.start))
                                 .font(.subheadline)
-                            Text("End: \(formattedDate(schedule.end))")
+                            Text("from \(formattedHour(schedule.start)) to \(formattedHour(schedule.end))")
                                 .font(.subheadline)
                         }
                     }
